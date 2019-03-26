@@ -42,6 +42,13 @@
   color: #FFFFFF;
 }
 
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -176,14 +183,14 @@ body header * {
 body header #logo {
   position: fixed;
   left: calc(50% - 30px);
-  width: 60px;
+  width: 40px;
   max-width: 70px;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
 body header #logo img {
-  height: 60px;
+  height: 40px;
 }
 
 body header #menu {
@@ -315,7 +322,7 @@ body #about {
 body #about h1 {
   font-weight: 600;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 body #about p {
@@ -366,6 +373,7 @@ body #about #skills .skill {
 body #about #skills .skill img {
   width: 70px;
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 body #about #skills .skill h3 {
@@ -540,6 +548,68 @@ body #contact h1 {
   font-size: 20px;
   margin-bottom: 20px;
   color: #FFFFFF;
+}
+
+body #contact .app-form-group {
+  margin-bottom: 15px;
+}
+
+body #contact .app-form-group.message {
+  margin-top: 40px;
+}
+
+body #contact .app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+body #contact .app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
+}
+
+body #contact .app-form-control::-webkit-input-placeholder {
+  color: #333372;
+}
+
+body #contact .app-form-control:-ms-input-placeholder {
+  color: #333372;
+}
+
+body #contact .app-form-control::-ms-input-placeholder {
+  color: #333372;
+}
+
+body #contact .app-form-control::placeholder {
+  color: #333372;
+}
+
+body #contact .app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+body #contact .app-form-button {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 700;
+  float: right;
+}
+
+body #contact .app-form-button:hover {
+  color: #333372;
 }
 
 body footer {
