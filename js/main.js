@@ -1,38 +1,37 @@
-let header = document.querySelector('body header');
-let banner = document.querySelector("#banner");
+let home = document.querySelector("#home");
 let logo = document.querySelector("#logo");
+let about = document.querySelector("#about");
+let contact = document.querySelector("#contact");
 
-let menuOptions = [...document.querySelectorAll('#menu li')];
+let menuOptions = [...document.querySelectorAll('#navBar .menu li')];
 
 $(window).on('scroll', function () {
     var y_scroll_pos = window.pageYOffset;
+
     console.log(y_scroll_pos);
-    if (y_scroll_pos > 95) {
-        header.className = 'down'
-        //goToTop.style.display = 'flex'
-    } else {
-        header.className = 'top';
-        //goToTop.style.display = 'none'
-    }
-    if (y_scroll_pos <= 330){
+    console.log(home.scrollHeight);
+    console.log(about.scrollHeight);
+    console.log(contact.scrollHeight);
+
+    if (y_scroll_pos <= home.scrollHeight/2){
         menuOptions[0].className = 'active';
         menuOptions[1].className = ' ';
         menuOptions[2].className = ' ';
         menuOptions[3].className = ' ';
     }
 
-    if (y_scroll_pos > 530 && y_scroll_pos <= 770){
+    if (y_scroll_pos > home.scrollHeight/2 && y_scroll_pos <= (home.scrollHeight/2 + (about.scrollHeight/2))){
         menuOptions[0].className = ' ';
         menuOptions[1].className = 'active';
         menuOptions[2].className = ' ';
         menuOptions[3].className = ' ';
     }
 
-    if (y_scroll_pos > 970 && y_scroll_pos < 1800){
+    if (y_scroll_pos > home.scrollHeight + about.scrollHeight/2 && y_scroll_pos <= (home.scrollHeight + about.scrollHeight/2 + (contact.scrollHeight/2))){
         menuOptions[0].className = ' ';
         menuOptions[1].className = ' ';
-        menuOptions[2].className = 'active';
-        menuOptions[3].className = ' ';
+        menuOptions[2].className = ' ';
+        menuOptions[3].className = 'active';
     }
 });
 
